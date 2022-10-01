@@ -4,7 +4,7 @@ Submitted by: Taj-Hakeem Ryles
 
 Flixster Clone is a movie browsing app that allows users to browse movies currently playing in theaters.
 
-Time spent: 8.5 hours spent in total
+Time spent: 9.5 hours spent in total
 
 ## Required Features
 
@@ -26,10 +26,10 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='walkthrough.gif' title='Video walkthrough' width='' alt='Video walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with ...  LICEcap
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -38,6 +38,7 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
+-Dealing with the data comming back from the MovieDB, that was the biggest struggle for me when it came to completeing this project.
 
 ## License
 
