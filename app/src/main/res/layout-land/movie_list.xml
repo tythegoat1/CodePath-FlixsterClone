@@ -7,16 +7,13 @@
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list"
-        android:name="com.codepath.bestsellerlistapp.BestSellerBooksFragment"
+        android:id="@+id/movieList"
+        android:name="com.example.codepath_flixsterclone.movieFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_margin="5dp"
         app:layoutManager="LinearLayoutManager"
-        tools:context=".BestSellerBooksFragment"
+        tools:context=".MovieFragment"
         tools:listitem="@layout/movie_row" />
 
     <androidx.core.widget.ContentLoadingProgressBar
