@@ -1,8 +1,15 @@
 package com.example.codepath_flixsterclone
 
+import com.google.gson.annotations.SerializedName
+
 
 class CurrentMovie {
-    var movieTitleModel : String? = null,
-    var movieDescriptionModel : String? = null,
+    @SerializedName("title")
+    var movieTitleModel : String? = null
+
+    @SerializedName("overview")
+    var movieDescriptionModel : String? = null
+
+    @SerializedName("poster_path")
     var movieImageModel: String? = null
 }
