@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:padding="10dp"
     android:layout_marginBottom="5dp"
     android:layout_width="match_parent"
@@ -11,9 +12,9 @@
         android:id="@+id/movieImageIV"
         android:layout_width="106dp"
         android:layout_height="156dp"
+        android:contentDescription="@string/movie_poster_image"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/movieTitleTV"
-        android:contentDescription="@string/movie_poster_image" />
+        app:layout_constraintTop_toBottomOf="@+id/movieTitleTV" />
 
     <TextView
         android:id="@+id/movieTitleTV"
@@ -46,4 +47,4 @@
         app:layout_constraintTop_toTopOf="@+id/movieImageIV"
         app:layout_constraintVertical_bias="0.0" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+   </androidx.constraintlayout.widget.ConstraintLayout>

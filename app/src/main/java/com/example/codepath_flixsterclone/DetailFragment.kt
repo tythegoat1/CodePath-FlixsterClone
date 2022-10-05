@@ -1,12 +1,10 @@
 package com.example.codepath_flixsterclone
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.widget.ContentLoadingProgressBar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,11 +17,12 @@ import com.google.gson.reflect.TypeToken
 import okhttp3.Headers
 import org.json.JSONArray
 
-private const val BASE_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key="
+private const val Detail_URL = "https://api.themoviedb.org/3/movie/${MovieID}?api_key="
+private const val SIM_URL = "https://api.themoviedb.org/3/movie/${MovieID}/similar?api_key="
 private const val API_KEY = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
 
 
-class MovieFragment : Fragment(), OnListFragmentInteractionListener {
+class DetailFragment : Fragment(), OnListFragmentInteractionListener {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,7 +47,7 @@ class MovieFragment : Fragment(), OnListFragmentInteractionListener {
 
         // Using the client, perform the HTTP request
         client [
-                "${BASE_URL}${API_KEY}&language=en-US&page=1",
+                "${Detail_URL}${API_KEY}&language=en-US&page=1",
                 params,
                 object: JsonHttpResponseHandler()
                 {
@@ -97,15 +96,3 @@ class MovieFragment : Fragment(), OnListFragmentInteractionListener {
                     }
                 }]
     }
-
-    override fun onItemClick(item: CurrentMovie) {
-        //item.movieIdNumber give me access to the IdNumber
-        Toast.makeText(context, "test: " + item.movieIdNumber, Toast.LENGTH_LONG).show()
-        //Pass the item.movieIdNumber to detailView
-        // Construct the INTENT
-//        val i = Intent(this@MovieFragment, DetailFragment::class.java)
-//        // Invoke the startActivity method
-//        startActivity(i) // brings up the second activity
-    }
-
-}
