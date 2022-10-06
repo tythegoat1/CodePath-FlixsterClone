@@ -28,9 +28,9 @@ class DetailFragment : Fragment(), OnListFragmentInteractionListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.movie_list, container, false)
-        val progressBar = view.findViewById<View>(R.id.progress) as ContentLoadingProgressBar
-        val recyclerView = view.findViewById<View>(R.id.movieList) as RecyclerView
+        val view = inflater.inflate(R.layout.detail_list, container, false)
+        val progressBar = view.findViewById<View>(R.id.Detailprogress) as ContentLoadingProgressBar
+        val recyclerView = view.findViewById<View>(R.id.moviePosterRV) as RecyclerView
         val context = view.context
         recyclerView.layoutManager = LinearLayoutManager(context)
         updateAdapter(progressBar, recyclerView)
@@ -63,7 +63,7 @@ class DetailFragment : Fragment(), OnListFragmentInteractionListener {
                         progressBar.hide()
 
                         // Look for this in Logcat:
-                        Log.d("movieFragment", json.toString())
+                        Log.d("DetailFragment", json.toString())
 
 
                         val resultsJSON : JSONArray = json.jsonObject.get("results") as JSONArray
@@ -74,7 +74,7 @@ class DetailFragment : Fragment(), OnListFragmentInteractionListener {
                         val arrayMovieType = object : TypeToken<List<CurrentMovie>>() {}.type
 
                         val models : List<CurrentMovie> = gson.fromJson(moviesRawJSON, arrayMovieType)
-                        recyclerView.adapter = MovieRecyclerViewAdapter(models,this@MovieFragment)
+                        recyclerView.adapter = DetailRecyclerViewAdapter(models,this@DetailFragment)
 
                     }
                     /*

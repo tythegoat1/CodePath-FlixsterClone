@@ -47,10 +47,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/SimilarMovieRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="170dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:spanCount="1"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:spanCount="1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
