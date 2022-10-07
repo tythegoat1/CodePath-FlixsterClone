@@ -103,7 +103,10 @@ class MovieFragment : Fragment(), OnListFragmentInteractionListener {
         Toast.makeText(context, "test: " + item.movieIdNumber, Toast.LENGTH_LONG).show()
         //Pass the item.movieIdNumber to detailView
         // Construct the INTENT
-        val i = Intent(this@MovieFragment, MainActivityDetail::class.java)
+        val i = Intent(this@MovieFragment.context, MainActivityDetail::class.java)
+        i.putExtra("title", item.movieTitleModel)
+        i.putExtra("description", item.movieDescriptionModel)
+        i.putExtra("posterID", item.movieIdNumber)
         // Invoke the startActivity method
         startActivity(i) // brings up the second activity
     }
