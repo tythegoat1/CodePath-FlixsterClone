@@ -6,7 +6,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.widget.ContentLoadingProgressBar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,6 +17,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import okhttp3.Headers
 import org.json.JSONArray
+
 
 private const val BASE_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key="
 private const val API_KEY = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
@@ -64,7 +64,7 @@ class MovieFragment : Fragment(), OnListFragmentInteractionListener {
                         progressBar.hide()
 
                         // Look for this in Logcat:
-                        Log.d("movieFragment", json.toString())
+                        //Log.d("movieFragment", json.toString())
 
 
                         val resultsJSON : JSONArray = json.jsonObject.get("results") as JSONArray
@@ -100,13 +100,16 @@ class MovieFragment : Fragment(), OnListFragmentInteractionListener {
 
     override fun onItemClick(item: CurrentMovie) {
         //item.movieIdNumber give me access to the IdNumber
-        Toast.makeText(context, "test: " + item.movieIdNumber, Toast.LENGTH_LONG).show()
         //Pass the item.movieIdNumber to detailView
         // Construct the INTENT
         val i = Intent(this@MovieFragment.context, MainActivityDetail::class.java)
         i.putExtra("title", item.movieTitleModel)
         i.putExtra("description", item.movieDescriptionModel)
-        i.putExtra("posterID", item.movieIdNumber)
+        i.putExtra("posterID", item.movieImageModel)
+        i.putExtra("releaseDate", item.releaseDate)
+        i.putExtra("voteAvg", item.voteAverage)
+        i.putExtra("voteCount", item.voteCount)
+
         // Invoke the startActivity method
         startActivity(i) // brings up the second activity
     }
