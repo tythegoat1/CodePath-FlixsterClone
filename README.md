@@ -1,10 +1,10 @@
-# Android Project 3 - Flixster Clone
+# Android Project 3/4 - Flixster Clone
 
 Submitted by: Taj-Hakeem Ryles
 
 Flixster Clone is a movie browsing app that allows users to browse movies currently playing in theaters.
 
-Time spent: 9.5 hours spent in total
+Time spent: 11.25 hours spent in total
 
 ## Required Features
 
@@ -13,6 +13,8 @@ The following **required** functionality is completed:
 - [x] **Make a request to [The Movie Database API's `now_playing`](https://developers.themoviedb.org/3/movies/get-now-playing) endpoint to get a list of current movies**
 - [x] **Parse through JSON data and implement a RecyclerView to display all movies**
 - [x] **Use Glide to load and display movie poster images**
+- [x] **Click on an entry to view specific details about that entry using Intents**
+
 
 The following **optional** features are implemented:
 
@@ -27,6 +29,8 @@ The following **optional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='walkthrough.gif' title='Video walkthrough' width='' alt='Video walkthrough' />
+
+<img src='walkthrough-part2.gif' title='Video walkthrough part 2' width='' alt='Video walkthrough of detail view' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  LICEcap
