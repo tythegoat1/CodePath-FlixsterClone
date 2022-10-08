@@ -14,5 +14,14 @@ class CurrentMovie {
 
     @SerializedName("poster_path")
     var movieImageModel: String? = null
+
+    @SerializedName("release_date")
+    var releaseDate: String? = null
+
+    @SerializedName("vote_average")
+    var voteAverage: String? = null
+
+    @SerializedName("vote_count")
+    var voteCount: String? = null
 }
 
